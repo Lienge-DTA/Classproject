@@ -1,5 +1,5 @@
-resource "aws_s3_bucket" "lienge-group1" {
-  bucket = "lienge-group1"
+resource "aws_s3_bucket" "lienge-group" {
+  bucket = "lienge-group"
 
 }
 

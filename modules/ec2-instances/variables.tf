@@ -44,15 +44,15 @@ variable "azsubnet_priv0" {
 
 }
 
-variable "ami_id" {
-  description = "The AMI ID for the EC2 instances"
-  type        = string
-}
+# variable "ami_id" {
+#   description = "The AMI ID for the EC2 instances"
+#   type        = string
+# }
 
-variable "ec2_instance_type" {
-  description = "The type of EC2 instance"
-  type        = string
-}
+# variable "ec2_instance_type" {
+#   description = "The type of EC2 instance"
+#   type        = string
+# }
 
 variable "subnet_ids" {
   description = "List of subnet IDs"
@@ -64,7 +64,7 @@ variable "environment" {
   type        = string
 }
 
-variable "instance_count" {
-  description = "Number of EC2 instances to create"
-  type        = number
-}
+# variable "instance_count" {
+#   description = "Number of EC2 instances to create"
+#   type        = number
+# }

@@ -30,7 +30,7 @@
 # Components of the EC2
 
 output "ec2_subnets" {
-    value = module.ec2-instances.subnets
+    value = module/ec2-instances.subnets
   
 }
 

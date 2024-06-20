@@ -25,13 +25,12 @@ module "route" {
   source = "./modules/route-table"
 }
 
-module "ec2-instances" {
-  source            = "./modules/ec2-instances"
-  ami_id            = var.ami_id
-  ec2_instance_type = var.ec2_instance_type
-  subnet_ids        = [aws_subnet.liengesubpub[0].id, aws_subnet.liengesubpub[1].id]
-  instance_count    = var.instance_count
-}
+# module "ec2-instances" {
+#   source            = "./modules/ec2-instances"
+#   ami_id            = var.ami_id
+#   ec2_instance_type = var.ec2_instance_type
+#   subnet_ids        = [aws_subnet.liengesubpub[0].id, aws_subnet.liengesubpub[1].id]
+#   instance_count    = var.instance_count
 
 module "s3" {
   source = "./modules/s3"

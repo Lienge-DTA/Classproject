@@ -4,47 +4,6 @@ variable "region" {
 
 }
 
-# variable "bucket" {
-#   type    = string
-#   default = "lienge-group"
-
-# }
-
-variable "db" {
-  type    = string
-  default = "liengedb"
-
-}
-
-variable "subnet_id" {
-  type = string
-  
-}
-
-# variable "vpcname" {
-#   type    = string
-#   default = "liengevpc"
-
-# }
-
-# variable "vpctags" {
-#   type    = list(string)
-#   default = ["transit", "database", "financial", "Pearl"]
-
-# }
-
-# variable "azsubnet_pub" {
-#   type    = list(string)
-#   default = ["us-east-1a", "us-east-1b"]
-
-# }
-
-# variable "cidrvpc" {
-#   type    = list(string)
-#   default = ["125.168.0.0/16", "125.169.0.0/16", "125.170.0.0/16"]
-
-# }
-
 variable "cidrvpc" {
   type    = list(string)
   default = ["10.1.0.0/16", "10.2.0.0/16", "10.3.0.0/16"]
@@ -162,4 +121,22 @@ variable "ec2tags" {
   type    = list(string)
   default = ["ec20", "ec21", "ec22"]
 
+}
+
+variable "ami_id" {
+  description = "The ID of the AMI to use for EC2 instances"
+  type        = string
+  default = "ami-04b70fa74e45c3917"
+}
+
+variable "environment" {
+  description = "The environment for the EC2 instances"
+  type        = string
+  default = "production"
+}
+
+variable "instance_count" {
+  description = "The number of EC2 instances to create"
+  type        = number
+  default = 3
 }
